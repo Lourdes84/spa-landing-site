@@ -1,0 +1,72 @@
+/** ** ** VENTANAS MODAL ** ** **/
+
+.modal-container
+    opacity: 0
+    visibility: hidden
+    position: fixed
+    z-index: 100
+    width: 100%
+    height: 100vh
+    top: 0
+    left: 0
+    background: rgba(0,0,0,0.5)
+    @include caja-flex(center, row, nowrap)
+    align-items: center
+
+.modal
+    width: 80%
+    height: 50%
+    padding: 10px
+    background: $gris-claro
+    overflow-y: scroll
+    align-items: center
+    text-align: center
+    position: relative
+    transition: transform 1s
+    transform: translateY(0%)
+
+    img 
+        height: 50%
+        border: $borde-claro
+        box-shadow: $sombra
+        margin: 0
+
+.modal-textos
+    background: $gris-medio
+    padding: 10px 10px 35px 10px
+    box-shadow: $sombra
+
+    span
+        background: $bg-button
+        color: $blanco
+        padding: 2px 5px
+        display: inline-block
+        margin-bottom: 10px
+
+.close 
+    position: absolute
+    top: -9px
+    right: 5px
+    display: inline-block
+    width: 25px
+    height: 25px
+    border: $borde-claro
+    background: $bg-button
+    color: $blanco
+    line-height: 25px
+    cursor: pointer
+
+
+.modal-close 
+    transform: translateY(-200%)
+
+@media screen and(min-width: 992px)
+    .modal
+        display: flex
+        overflow: hidden
+        img
+             margin: 10px
+
+@media screen and(min-width: 1235px)
+    .modal
+        width: 60%

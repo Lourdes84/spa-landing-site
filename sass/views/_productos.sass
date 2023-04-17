@@ -1,0 +1,67 @@
+/** ** ** SECCION PRODUCTOS ** ** **/
+
+.container-productos 
+    margin-bottom: 150px
+
+
+.container-productos__text 
+    padding-bottom: 40px
+
+
+.container-productos__buscador 
+    font-style: italic
+    font-size: 18px
+
+
+.productos-galeria__facial,
+.productos-galeria__corporal,
+.productos-galeria__aromaterapia 
+    display: none
+
+
+.productos-galeria--activo 
+    display: block
+
+.productos-lista 
+    @include caja-flex(center, row, wrap)
+    list-style: none
+    padding-left: 0
+    margin-bottom: 100px
+
+.productos-lista__item 
+    width: 300px
+    height: 400px
+    position: relative
+    overflow: hidden
+    cursor: pointer
+
+.productos-lista__title
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    @include caja-flex(center,row, nowrap)
+    text-align: center
+    align-items: flex-end
+    font-size: 17px
+    color: rgb(162, 162, 162)
+
+.productos-lista__hover 
+    width: 100%
+    height: 100%
+    position: absolute
+    background: $gris-claro
+    top: 0
+    display: flex
+    text-align: center
+    align-items: center
+    font-size: 15px
+    font-style: italic
+    opacity: 0
+    transition: .3s ease-in
+
+    p 
+        margin: 0 20px
+    
+.productos-lista__item:hover .productos-lista__hover
+   opacity: 1

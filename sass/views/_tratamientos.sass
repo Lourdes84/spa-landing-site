@@ -1,0 +1,99 @@
+/** ** ** SECCION TRATAMIENTOS ** ** **/
+
+.tratamientos__title 
+    background: url(../assets//img/bg-tratamientos.jpg)
+    background-size: cover
+    
+    .title 
+        margin: 0
+    
+.tratamientos-text 
+    padding-bottom: 40px  
+
+.tratamientos-text__categorias 
+    @include caja-flex(center, row, nowrap)
+    align-items: center
+
+
+.tratamientos-text__categorias > div
+    padding: 10px
+
+
+.tratamientos-text__categorias > div > img
+    width: 40px
+
+@media screen and (min-width: 571px)
+
+    .tratamientos-text__categorias > div
+        padding: 10px
+    
+    
+    .tratamientos-text__categorias > div
+        padding: 10px
+    
+    
+    .tratamientos-text__categorias > div > img
+        width: 40px
+
+     
+.container-tratamientos .subtitle 
+    text-align: center
+
+ 
+.container-tratamientos__galeria 
+    background: rgba(194, 177, 185, 0.4)
+    @include caja-flex(center, row, wrap)
+    padding: 40px
+
+
+.container-tratamientos__img 
+    width: 250px
+    margin: 10px
+    overflow: hidden
+    position: relative
+    cursor: pointer
+    border: $borde-claro
+    box-shadow: $sombra
+
+    > img 
+        width: 250px
+        display: block
+
+    
+.hover-galeria 
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    transform: scale(0)
+    background: $gris-claro
+    transition: transform .5s
+    @include caja-flex(center, column, nowrap)
+    align-items: center
+    
+    > img 
+        width: 50px
+        height: 60px
+        opacity: 0.5
+        border: $borde-oscuro
+
+    
+.container-tratamientos__img:hover .hover-galeria 
+    transform: scale(1)
+
+
+@media screen and (min-width: 412px)
+    .container-tratamientos__img 
+        width: 300px
+        height: 200px
+
+        > img 
+            width: 300px
+            height: 200px
+        
+    .hover-galeria > img 
+        width: 100px
+        height: 120px
+        opacity: 0.5
+        border: $borde-oscuro
+    

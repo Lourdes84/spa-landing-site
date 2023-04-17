@@ -1,0 +1,97 @@
+/** ** ** SECCION CONTACTA CON NOSOTROS ** ** **/
+
+.container-contacto 
+    background: url(../assets/img/bg-tratamientos.jpg)
+    background-size: cover
+    padding: 20px
+    margin-bottom: 120px
+    border-radius: 20px
+    box-shadow: 0px 4px 8px 0px #ccc
+
+.form 
+    display: grid
+    grid-template-columns: 100%
+
+.form input,
+.form textarea
+    width: 95%
+    margin: 8px 0
+    padding: 5px 5px 
+    background: $gris-claro
+    border: none
+    outline: 0
+    border-bottom: $borde-claro
+.form 
+    textarea 
+        resize: none
+
+.form__field--error 
+        input 
+            border-bottom: 2px solid red
+
+.form__field--correcto 
+        input 
+            border-bottom: 2px solid green
+
+.form__field-mensaje
+    padding-bottom: 5px
+    font-weight: bold
+    display: none
+
+.form__mensaje-exito,
+.form__mensaje-error
+    width: 95%
+    font-weight: bold
+    letter-spacing: 3px
+    background: $gris-claro
+    text-align: center
+    padding: 0px 5px
+    display: none   
+
+.form__mensaje-exito-activo
+    display: block
+    color: green
+    border: 1px solid green
+
+.form__mensaje-error-activo
+    display: block
+    color: red
+    border: 1px solid red
+
+.form__field-mensaje-activo
+    display: block
+
+.form 
+    input[type="submit"] 
+        width: 80px
+        background: $blanco
+        margin-top: 10px
+        border: 1px solid #000
+        text-transform: uppercase
+        font-family: $fuente-principal
+        letter-spacing: 2px
+        font-size: 15px
+        font-weight: bold
+        cursor: pointer
+
+        &:hover 
+            background: $bg-button
+
+
+@media screen and (min-width: 632px)
+    .form 
+        grid-template-columns: repeat(2, 1fr)
+    
+    .form .block 
+        grid-column: 1/3
+
+    .form 
+        textarea 
+            width: 97.5%
+
+    .form__mensaje-exito,
+    .form__mensaje-error
+        width: 97.5%
+
+    
+

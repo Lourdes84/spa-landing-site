@@ -1,0 +1,21 @@
+/** ** ** SECCION NOSOTROS ** ** **/
+
+.container-nosotros 
+    @include caja-flex(center, column, nowrap)
+    align-items: center
+
+
+.container-nosotros__img 
+    width: 100%
+    margin: 20px
+    border: $borde-oscuro
+
+
+@media screen and (min-width: 1018px)
+    .container-nosotros 
+        flex-direction: row
+    
+
+    .container-nosotros__img 
+        width: 50%
+    

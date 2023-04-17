@@ -1,0 +1,57 @@
+.nav 
+    display: none
+    flex-direction: column
+    align-items: center
+
+
+.effect 
+    animation-name: effects
+    animation-duration: .5s
+
+@keyframes effects
+    0%
+        opacity: 0
+    
+    50% 
+        opacity: .5
+    
+    100% 
+        opacity: 1
+
+.nav__link 
+    margin: 0
+    color: $blanco
+    text-decoration: none
+    letter-spacing: 2px
+    padding: 10px 0
+    transition: all .3s ease-in-out
+
+    &:hover 
+        transform: scale(1.2)
+    
+
+@media screen and (min-width: 622px) 
+    .nav 
+        @include caja-flex(flex-end, row, nowrap)
+        padding: 30px 50px 0 0
+    
+    .icon-menu 
+        display: none
+    
+    .nav__link 
+        margin-right: 20px
+
+        &:last-of-type 
+            margin-right: 0
+        
+
+/**ICONO MENU NAVEGACION **/
+
+.icon-menu 
+    font-size: 50px
+    color: $blanco
+    text-align: end
+    cursor: pointer
+
+.icon-menu--mostrar 
+    display: flex

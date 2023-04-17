@@ -1,0 +1,46 @@
+/** ** ** FOOTER ** ** **/
+
+.footer 
+    background: $bg-gradient, url(../assets/img/header-img1.jpg)
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center bottom
+    color: $blanco
+
+
+.footer-container 
+    max-width: 1000px
+    margin: 0 auto
+    @include caja-flex(space-between, row, wrap)
+    padding-bottom: 20px
+
+
+.footer-container > div 
+    padding: 10px
+
+
+.footer-nav a 
+    display: block
+    text-decoration: none
+    color: $blanco
+
+    &:hover
+        text-decoration: underline
+
+.footer-info, 
+.footer-horario
+    p 
+        margin: 0
+
+.footer-info__link 
+    text-decoration: none
+    color: $blanco
+    display: block
+
+
+.footer-redes__link 
+    color: $blanco
+    text-decoration: none
+    font-size: 30px
+
+

@@ -1,0 +1,34 @@
+/** ** ** HEADER ** ** **/
+
+.header 
+    width: 100%
+    height: 600px
+    background: #232526
+    background: $bg-gradient, url(../assets/img/buddha-2109894_1280.jpg)
+    background-position: 40%
+    background-size: cover
+    position: relative
+
+.header__text 
+    color: $blanco
+    height: 430px
+    @include caja-flex(center, column, nowrap)
+    align-items: center
+    text-align: center
+    p
+        padding: 0px 5px
+
+.header__text--ocultar 
+    display: none
+
+
+.header__title 
+    font-family: $fuente-principal
+    font-weight: 600
+    font-size: 50px
+
+.header__wave 
+    position: absolute
+    bottom: 0
+    width: 100%
+

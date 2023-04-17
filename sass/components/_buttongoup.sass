@@ -1,0 +1,59 @@
+/** ** ** BUTTON GO UP ** ** **/
+
+.container-go-up 
+    position: fixed
+    bottom: 48px
+    right: 24px
+    width: 41.6px
+    height: 41.6px
+    z-index: -1
+
+.container-go-up__button 
+    width: 0px
+    height: 0px
+    background: $bg-button
+    border-radius: 50%
+    cursor: pointer
+    transition: .2s
+    top: 50%
+    left: 50%
+    transform: translate(40%, 50%)
+    z-index: -1
+
+    i 
+        position: absolute
+        font-size: 16px
+        top: 48%
+        left: 50%
+        transform: translate(-50%, -50%) scale(0)
+        color: $blanco
+        transition: .2s
+    
+
+.container-go-up__button--mostrar 
+    z-index: 10
+
+    i 
+        transform: translate(-50%, -50%) scale(1)
+    
+
+.container-go-up__button--mostrar .container-go-up__button 
+    animation: popup .3s ease-in-out
+    width: 41.6px
+    height: 41.6px
+    z-index: 11
+
+
+@keyframes popup
+    0% 
+        width: 0px
+        height: 0px
+    
+    50% 
+        width: 53.6px
+        height: 53.6px
+    
+    100% 
+        width: 41.6px
+        height: 41.6px
+    
